@@ -1,16 +1,20 @@
+// src/components/Footer.jsx
 function Footer() {
+    const currentYear = new Date().getFullYear();
+  
     return (
       <footer
         style={{
           textAlign: 'center',
-          position: 'fixed',
-          bottom: 0,
           width: '100%',
-          backgroundColor: '#d42424',  // Optionnel : un fond gris clair
-          padding: '2.5rem'           // Optionnel : pour aérer le texte
+          backgroundColor: '#d42424',
+          padding: '1rem',
+          marginTop: '2rem'
         }}
       >
-        <p>Tous droits réservés - Ouldelhkim Souhail Ismail</p>
+        <p style={{ margin: 0, color: '#fff' }}>
+          © {currentYear} - Ouldelhkim.Souhail.Ismail, Tous droits réservés.
+        </p>
       </footer>
     );
   }
