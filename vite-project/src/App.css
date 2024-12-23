@@ -38,5 +38,22 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #08d821;
+}
+
+/* Conteneur flex pour RandomNote et RandomNoteCandg */
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Pour écrans plus petits */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column; /* Empile les composants verticalement */
+    align-items: center;
+  }
 }
