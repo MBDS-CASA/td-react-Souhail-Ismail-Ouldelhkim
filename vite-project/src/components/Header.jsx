@@ -1,4 +1,4 @@
-import reactLogo from '../assets/react.svg';
+import reactLogo from '../assets/react.svg'; // Vérifie le chemin d'accès
 
 function Header() {
   return (
@@ -9,9 +9,9 @@ function Header() {
         style={{
           display: 'block',
           margin: '0 auto',
-          width: '80px',       // Ajuste la largeur
-          height: '80px',      // Ajuste la hauteur
-          objectFit: 'contain' // Pour garder les proportions
+          width: '80px',   // Ajuste la largeur
+          height: '80px',  // Ajuste la hauteur
+          objectFit: 'contain'
         }}
       />
       <h1>Ouldelhkim Souhail Ismail</h1>
