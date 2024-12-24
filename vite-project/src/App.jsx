@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-
-// Import de tes composants
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
 import RandomNote from "./components/RandomNote";
 import RandomNoteCandg from "./components/RandomNoteCandg";
+import Menu from "./components/Menu";
 
 import reactLogo from "./assets/react.svg";
 
@@ -15,6 +14,8 @@ function App() {
 
   return (
     <>
+
+      <Menu />
       <Header />
       <MainContent />
 
@@ -33,6 +34,8 @@ function App() {
 
         {/* Composant RandomNoteCandg */}
         <RandomNoteCandg />
+
+
       </div>
 
       <div style={{ textAlign: "center", marginTop: "1rem" }}>
