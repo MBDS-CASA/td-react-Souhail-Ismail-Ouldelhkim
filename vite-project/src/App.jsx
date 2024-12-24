@@ -1,41 +1,50 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import "./App.css";
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
 import RandomNote from "./components/RandomNote";
 import RandomNoteCandg from "./components/RandomNoteCandg";
+import reactLogo from "./assets/react.svg";
+
+
 import Menu from "./components/Menu";
 
-import reactLogo from "./assets/react.svg";
+import Grade from "./components/Pages/grade";  
+import Date from "./components/Pages/date";
+import StuedentName from "./components/Pages/StudentName";
+import Course from "./components/Pages/course";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-
+    <Router>
       <Menu />
       <Header />
-      <MainContent />
+      <Routes>
+        <Route path="/" element={<MainContent />} />
+        <Route path="/random-note" element={<RandomNote />} />
+        <Route path="/random-note-candg" element={<RandomNoteCandg />} />
+        <Route path="/grades" element={<Grade />} />
+        <Route path="/course" element={<Course />} />
+        <Route path="/studentName" element={<StuedentName />} />
+        <Route path="/date" element={<Date />} />
+      </Routes>
 
-      {/* Conteneur Flex pour aligner RandomNote et RandomNoteCandg */}
       <div
         style={{
           display: "flex",
-          justifyContent: "center", // Centrer horizontalement
-          alignItems: "flex-start", // Aligner verticalement en haut
-          gap: "2rem", // Espacement entre les deux composants
-          marginTop: "2rem", // Espace entre le contenu précédent et les composants
+          justifyContent: "center",
+          alignItems: "flex-start",
+          gap: "2rem",
+          marginTop: "2rem",
         }}
       >
-        {/* Composant RandomNote */}
         <RandomNote />
-
-        {/* Composant RandomNoteCandg */}
         <RandomNoteCandg />
-
-
       </div>
 
       <div style={{ textAlign: "center", marginTop: "1rem" }}>
@@ -49,8 +58,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Modification <code>Souhail Ismail Ouldelhkim</code> Ouldelhkim Souhail
-          Ismail
+          Modification <code>Souhail Ismail Ouldelhkim</code> Ouldelhkim Souhail Ismail
         </p>
       </div>
 
@@ -59,7 +67,7 @@ function App() {
       </p>
 
       <Footer />
-    </>
+    </Router>
   );
 }
 

@@ -1,4 +1,4 @@
-import reactLogo from '../assets/react.svg'; // Vérifie le chemin d'accès
+import reactLogo from '../assets/react.svg'; 
 
 function Header() {
   return (
@@ -9,8 +9,8 @@ function Header() {
         style={{
           display: 'block',
           margin: '0 auto',
-          width: '80px',   // Ajuste la largeur
-          height: '80px',  // Ajuste la hauteur
+          width: '80px',   
+          height: '80px',  
           objectFit: 'contain'
         }}
       />
