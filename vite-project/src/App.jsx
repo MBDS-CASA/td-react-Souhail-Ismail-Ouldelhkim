@@ -16,6 +16,7 @@ import Grade from "./components/Pages/grade";
 import Date from "./components/Pages/date";
 import StuedentName from "./components/Pages/StudentName";
 import Course from "./components/Pages/course";
+import TableNotes from "./components/Pages/TableNotes";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -32,6 +33,7 @@ function App() {
         <Route path="/course" element={<Course />} />
         <Route path="/studentName" element={<StuedentName />} />
         <Route path="/date" element={<Date />} />
+        <Route path="/tableNotes" element={<TableNotes />} />
       </Routes>
 
       <div
